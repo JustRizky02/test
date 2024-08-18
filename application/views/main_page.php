@@ -162,14 +162,17 @@
 						<td><?php echo $p['keterangan']; ?></td>
 						<td><?php echo $p['createdAt']; ?></td>
 						<td>
-							<a href="<?= base_url('Edit_Project/edit/'.$p['id']); ?>" class="btn btn-warning btn-sm">
-								<i class="fas fa-edit"></i> Edit
-							</a>
+							<div class="d-flex flex-column">
+								<a href="<?= base_url('Edit_Project/edit/'.$p['id']); ?>" class="btn btn-warning btn-sm mb-2">
+									<i class="fas fa-edit"></i> Edit
+								</a>
 
-							<button class="btn btn-danger btn-sm" onclick="deleteProject(<?php echo $p['id']; ?>)">
-								<i class="fas fa-trash-alt"></i> Delete
-							</button>
+								<button class="btn btn-danger btn-sm" onclick="deleteProject(<?php echo $p['id']; ?>)">
+									<i class="fas fa-trash-alt"></i> Delete
+								</button>
+							</div>
 						</td>
+
 					</tr>
 				<?php endforeach; ?>
 			<?php else: ?>
@@ -210,14 +213,17 @@
 						<td><?php echo $p['negara']; ?></td>
 						<td><?php echo $p['createdAt']; ?></td>
 						<td>
-							<a href="<?= base_url('Edit_Location/edit/'.$p['id']); ?>" class="btn btn-warning btn-sm">
-								<i class="fas fa-edit"></i> Edit
-							</a>
+							<div class="d-flex flex-column">
+								<a href="<?= base_url('Edit_Location/edit/'.$p['id']); ?>" class="btn btn-warning btn-sm mb-2">
+									<i class="fas fa-edit"></i> Edit
+								</a>
 
-							<button class="btn btn-danger btn-sm" onclick="deleteProject(<?php echo $p['id']; ?>)">
-								<i class="fas fa-trash-alt"></i> Delete
-							</button>
+								<button class="btn btn-danger btn-sm" onclick="deleteLocation(<?php echo $p['id']; ?>)">
+									<i class="fas fa-trash-alt"></i> Delete
+								</button>
+							</div>
 						</td>
+
 					</tr>
 				<?php endforeach; ?>
 			<?php else: ?>
